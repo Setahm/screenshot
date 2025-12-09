@@ -9,10 +9,11 @@ bw_image = screenshot.convert("L")
 
 flipped_image = bw_image.transpose(Image.FLIP_LEFT_RIGHT)
 
-image_path = r"C:\Users\setah\OneDrive\Pictures\Screenshots\screenshot_bw_flipped.png"
+image_path = r" "     //add your image path to Save in Desktop
+
 os.makedirs(os.path.dirname(image_path), exist_ok=True)
 
-zip_path = r"C:\Users\setah\OneDrive\Pictures\Screenshots\screenshot_bw_flipped.zip"
+zip_path = r""      //add your image path what need to compressed it.
 with zipfile.ZipFile(zip_path, "w") as zipf:
     zipf.write(image_path, arcname="screenshot_bw_flipped.png")
 
